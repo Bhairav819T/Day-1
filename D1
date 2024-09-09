@@ -1,0 +1,36 @@
+create table person(cid int primary key auto_increment,Fname varchar(20) not null,Lname varchar(20));
+
+insert into person(Fname,Lname)
+ value('Nathen','Drake'),("Hello","World");
+
+desc person ;
+
+select * from person;
+
+insert into person(Fname,Lname)
+ value('NEW','pdf');
+
+select * from person where Fname like '%o';
+
+select * from person where Fname like 'H%';
+
+update person set Fname="Who" where cid=1;
+
+delete from person where cid=5;
+
+insert into person values(10,"New","Value");
+
+create table dept(id int primary key,Nname varchar(20));
+
+insert into dept values(20,"CSE");
+
+select * from dept;
+insert into dept values(21,"ISE");
+insert into dept values(22,"AIML");
+insert into dept values(23,"EEE");
+
+update dept set Nname="Analysis" where id=20;
+update dept set Nname="Design" where id=21;
+
+update dept set Nname="Development" where id=22;
+update dept set Nname="Testing" where id=23;
